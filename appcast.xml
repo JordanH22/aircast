@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>AirCast Updates</title>
+        <link>https://jordanh22.github.io/aircast/appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>AirCast v1.1.1</title>
+            <description><![CDATA[
+                <h2>AirCast v1.1.1 — Hotfix 🔧</h2>
+                <ul>
+                    <li><strong>TNT Sports Ultimate EPG</strong>: Programme info now displays correctly.</li>
+                    <li><strong>Foreign EPG Bleed Fix</strong>: UK channels no longer show Spanish/foreign programme data.</li>
+                    <li><strong>Consistent Popout Menu</strong>: Stream selection popout now appears on all channels.</li>
+                </ul>
+            ]]></description>
+            <pubDate>Tue, 06 May 2026 18:00:00 +0100</pubDate>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/JordanH22/aircast/releases/download/v1.1.1/AirCast-macOS-1.1.1.dmg"
+                sparkle:version="2"
+                sparkle:shortVersionString="1.1.1"
+                sparkle:edSignature="4BUzVn+xYRV8j7P1Vth9TPnAZ+XhRDUMNYNsypjXaXT1z1bOpMbP0Kob5mZe2+XDCR01qu5AgNTwvsxm2iNLDg=="
+                length="9874784"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
+            <title>AirCast v1.1.0</title>
+            <description><![CDATA[
+                <h2>AirCast v1.1.0 — Liquid Glass Edition 💎</h2>
+                <ul>
+                    <li><strong>Intelligent Channel Consolidation</strong>: Automatically groups regional variants into single channels.</li>
+                    <li><strong>Enhanced EPG Accuracy</strong>: Fixed mapping issues for TNT Sports and regional networks.</li>
+                    <li><strong>Liquid Glass Branding</strong>: Complete visual overhaul with premium glass aesthetics.</li>
+                    <li><strong>Stream UX</strong>: Added "Playing" status indicators and animated signal symbols.</li>
+                    <li><strong>Stability</strong>: Improved HLS loading logic for server-side rate limiting.</li>
+                </ul>
+            ]]></description>
+            <pubDate>Sun, 04 May 2026 12:00:00 +0100</pubDate>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/JordanH22/aircast/releases/download/v1.1.0/AirCast-macOS-1.1.0.dmg"
+                sparkle:version="1"
+                sparkle:shortVersionString="1.1.0"
+                length="0"
+                type="application/octet-stream"
+            />
+        </item>
+    </channel>
+</rss>
