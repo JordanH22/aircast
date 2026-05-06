@@ -1,41 +1,85 @@
-# AirCast
+# AirCast — Premium IPTV for macOS & Apple TV 💎
 
-### Premium IPTV Streaming for macOS & Apple TV
+AirCast is a premium **Xtream & M3U** streaming client built natively for Apple platforms. Engineered from the ground up with Swift and Metal, it delivers the first truly professional-grade IPTV experience on macOS — with intelligent channel management, hardware-accelerated playback, and a design language that feels right at home on your Mac.
 
-AirCast is a next-generation IPTV client built natively for Apple platforms. Engineered from the ground up with Swift and Metal, it delivers a premium TV viewing experience with intelligent channel management, hardware-accelerated playback, and a UI that feels right at home on your Mac and Apple TV.
+<img src="screenshots/main_ui.png" width="100%" alt="AirCast Main Interface" />
+*The Liquid Glass interface with streamlined sidebar, integrated EPG progress tracking, and unified global search.*
 
 ---
 
-## ✨ Features
+## 📺 TV Guide — Your Channels, Organised
 
-### 🖥️ macOS
-- **Native macOS App** — Built with SwiftUI for macOS 14+
-- **AirPlay Integration** — Cast to any AirPlay-compatible device
-- **Picture-in-Picture** — Keep watching while you work
-- **Intelligent TV Guide** — Smart EPG deduplication with real programme data
-- **Multi-Source Quality Picker** — Choose your preferred stream quality and provider
-- **HEVC/H.265 Hardware Decoding** — Smooth 4K playback with minimal CPU usage
-- **HDR Support** — Full HDR10 and HLG support on compatible displays
-- **VLC Playback Engine** — Dual-engine architecture with AVPlayer + VLC fallback
-- **Stream Diagnostics** — Real-time bitrate, codec, and network monitoring
-- **Mini Player** — Floating overlay that follows you across tabs
+AirCast's intelligent TV Guide automatically maps your provider's raw M3U/Xtream channels to real UK Freeview/Sky logical positions. Browse by country, filter by category (Sports, Movies, News, Kids), and see what's on right now — complete with live programme titles, time-accurate progress bars, and "Next Up" info.
 
-### 📺 Apple TV
-- **Siri Remote Optimised** — First-class focus navigation
-- **Sky Q-Inspired UI** — Tab-based navigation with Sports, Movies, On Demand
-- **Favourites System** — Quick access to your most-watched channels  
-- **Smart Search** — Find channels instantly across your entire lineup
-- **VOD Library** — Browse and stream on-demand movies and series
-- **Quality Picker** — Liquid Glass overlay for stream source selection
-- **Full-Screen Player** — Native tvOS playback with transport controls
+The guide groups regional duplicates (BBC One London, BBC One West, etc.) into a single channel row, keeping your lineup clean while still giving you access to every variant.
 
-### 🔧 Under the Hood
-- **Smart EPG Engine** — Matches raw IPTV channels to real TV guide data
-- **Xtream Codes API** — Full compatibility with Xtream-based providers
-- **Sentient Channel Matcher** — AI-powered channel name normalisation
-- **UK Channel Ordering** — Automatic Freeview/Sky logical channel numbers
-- **Anti-Buffering** — Intelligent stream source failover
-- **ProMotion Support** — 120Hz UI rendering on compatible displays
+<img src="screenshots/tv_guide.png" width="100%" alt="TV Guide" />
+*The TV Guide showing UK channels in Sky order, with real-time EPG data, colour-coded progress bars, and the mini player docked at the bottom.*
+
+---
+
+## ⭐ Favourites & Stream Selection
+
+Pin your most-watched channels to a dedicated **Favourites** section that sits right at the top of the guide. When you open the stream popout, your favourited streams are marked with a ⭐ so you always know which sources you've saved.
+
+AirCast goes further than any other player by letting you favourite at two levels:
+- **Channel-level**: Pin the whole channel to your Favourites bar.
+- **Stream-level**: Pin a specific source (e.g., the 4K HEVC feed from your fastest CDN) so it auto-launches without the picker.
+
+<img src="screenshots/favourites_popout.png" width="100%" alt="Favourites & Stream Popout" />
+*The stream selection popout showing all available sources for a channel — quality tiers, codecs, and favourited streams all in one place.*
+
+---
+
+## ✏️ Rename Streams — Make It Yours
+
+Generic provider labels like "VIP: SKY SPORT 1 ᴴᴰ" aren't helpful when you're choosing between sources. AirCast lets you **rename any stream** to something meaningful — "4K Main", "Backup HD", or whatever makes sense to you. Your custom names persist across sessions.
+
+<img src="screenshots/stream_rename.png" width="100%" alt="Rename Stream" />
+*Right-click any stream in the popout to open the rename dialog.*
+
+<img src="screenshots/stream_rename_2.png" width="100%" alt="Rename Stream Applied" />
+*Custom names appear instantly in the picker, making source selection effortless.*
+
+---
+
+## 🩺 Stream Diagnostics — Under the Hood
+
+For power users and troubleshooters, AirCast includes a full **Diagnostics** tab that monitors every active connection in real time. At a glance you can see:
+
+- **Stream Health**: Green/amber/red status with connection quality summary
+- **Network Stats**: Download speed, bitrate, buffer health, and packet loss
+- **AI Recommendations**: The diagnostics engine analyses your setup and suggests actionable fixes — like switching CDN, lowering quality, or flagging ISP throttling
+- **Codec & Resolution**: Confirm you're actually receiving the HEVC/4K/HDR stream you selected
+
+<img src="screenshots/diagnostics.png" width="100%" alt="Diagnostics Dashboard" />
+*The Diagnostics tab showing real-time health monitoring, per-stream network metrics, and AI-powered recommendations for optimal playback.*
+
+---
+
+## 🔍 Intelligent EPG Engine
+
+AirCast's **Sentient Channel Matcher** goes beyond basic string matching. It normalises plurals ("Sports" ↔ "Sport"), strips provider prefixes and quality tags, handles regional suffixes, and cross-references UK Freeview/Sky channel numbers — all to ensure your guide data is as accurate as possible, even when your provider's playlist is messy.
+
+<img src="screenshots/quality_selector.png" width="100%" alt="EPG Quality & Source Selection" />
+*Unified source selection showing categorised quality tiers (4K, RAW, HD) with real-time bitrate data and codec information.*
+
+---
+
+## 🏆 Why AirCast?
+
+While Android users have enjoyed **TiviMate**, macOS has long lacked a native, premium-grade streaming experience. AirCast bridges that gap:
+
+| Feature | AirCast | TiviMate | Smarters / GSE |
+| :--- | :---: | :---: | :---: |
+| **Native macOS Design** | ✅ Liquid Glass | ❌ Emulator only | ⚠️ Basic |
+| **Auto Channel Grouping** | ✅ Regional Logic | ❌ Manual only | ❌ |
+| **Stream-Level Favourites** | ✅ | ❌ | ❌ |
+| **Stream Renaming** | ✅ | ❌ | ❌ |
+| **Metal/AVF Performance** | ✅ | ❌ | ⚠️ |
+| **Live Diagnostics** | ✅ AI-Powered | ❌ | ❌ |
+| **EPG Fuzzy Matching** | ✅ Sentient Engine | ⚠️ | ❌ |
+| **Apple TV Support** | ✅ Native tvOS | ❌ | ⚠️ |
 
 ---
 
@@ -47,73 +91,43 @@ AirCast is a next-generation IPTV client built natively for Apple platforms. Eng
 | **Apple TV** | [Download IPA](https://github.com/JordanH22/aircast/releases/latest) | tvOS 17.0 or later |
 
 ### macOS Installation
-1. Download `AirCast-macOS.dmg` from the latest release
-2. Open the DMG and drag **AirCast** to your Applications folder
-3. Launch AirCast from Applications
-4. If macOS shows a security prompt, go to **System Settings → Privacy & Security** and click **Open Anyway**
+1. Download `AirCast-macOS.dmg` from the latest release.
+2. Drag **AirCast** to your **Applications** folder.
+3. Launch and sign in with your **Xtream API** credentials or load an **M3U Playlist**.
+
+<img src="screenshots/dmg_installer.png" width="100%" alt="AirCast Installation" />
+*Drag and drop to install.*
 
 ### Apple TV Installation
-AirCast for Apple TV is distributed as a sideloadable `.ipa` file. You can install it using:
-- **Apple Configurator 2** (Mac App Store, free)
-- **Sideloadly** ([sideloadly.io](https://sideloadly.io))
-- **Xcode** via Devices & Simulators
+Distributed as a sideloadable `.ipa` — install via [Sideloadly](https://sideloadly.io), Apple Configurator 2, or Xcode.
 
-> **Note:** Sideloaded apps need to be re-signed every 7 days with a free Apple ID, or 365 days with a paid Apple Developer account.
+> **Note:** Free Apple IDs require re-signing every 7 days. A paid Developer account extends this to 365 days.
 
 ---
 
-## 🔑 Licensing
+## 🔑 Licensing & Free Trial
 
-AirCast includes a **14-day free trial** with full functionality. After the trial, a license key is required.
+AirCast comes with a **14-day free trial** — full access, no credit card required. One license covers both macOS and Apple TV (up to 3 devices).
 
-| Plan | Price | Details |
+| Plan | Price | Link |
 |---|---|---|
 | **Annual** | £7.99/year | [Purchase →](https://buy.stripe.com/cNiaEQ8Htb78cPDebrcbC00) |
 | **Lifetime** | £19.99 once | [Purchase →](https://buy.stripe.com/8x27sE3n9grseXL0kBcbC01) |
 
-- ✅ One license covers **both macOS and Apple TV**
-- ✅ Activate on up to **3 devices**
-- ✅ Instant delivery — your license key is displayed immediately after purchase
-- ✅ Secure payment via Stripe
-
-### Activating Your License
-1. Purchase a license using one of the links above
-2. Copy your license key from the thank-you page
-3. Open AirCast and paste the key in the activation screen
-4. That's it — you're in!
-
 ---
+
+## 🔄 Auto-Updates
+
+AirCast includes built-in Sparkle support for seamless background updates. You'll be notified automatically when a new version is available.
 
 ## 🛡️ Privacy
 
-AirCast does not collect, store, or transmit any personal data. Your IPTV credentials are stored locally on your device. License validation is performed via a secure API that only checks your license key status — no usage tracking, no analytics, no telemetry.
-
----
-
-## 🐛 Bug Reports
-
-Found a bug? Please [open an issue](https://github.com/JordanH22/aircast/issues/new) with:
-- Your macOS/tvOS version
-- Steps to reproduce
-- Any error messages or screenshots
-
----
-
-## 📋 Changelog
-
-### v1.0.0
-- Initial release
-- macOS and Apple TV support
-- Smart EPG with intelligent channel matching
-- Dual playback engine (AVPlayer + VLC)
-- HEVC hardware decoding
-- HDR10/HLG support
-- VOD streaming (Movies & Series)
-- Stream diagnostics dashboard
+AirCast does not collect, store, or transmit any personal data. Your IPTV credentials are stored locally on-device. License validation checks your key status only — no usage tracking, no analytics, no telemetry.
 
 ---
 
 <p align="center">
+  <img src="screenshots/brand_identity.jpg" width="600" alt="AirCast Brand Identity" /><br>
   <sub>Built with ❤️ in the UK</sub><br>
   <sub>© 2025 AirCast. All rights reserved.</sub><br>
   <sub>Source code is private. This repository is for distribution only.</sub>
